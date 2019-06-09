@@ -1,5 +1,7 @@
 echo "Pushing service docker images to docker hub ...."
-docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+echo $DOCKER_USERNAME
+echo $DOCKER_PASSWORD
+echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
 docker push johncarnell/tmx-authentication-service:$BUILD_NAME
 docker push johncarnell/tmx-licensing-service:$BUILD_NAME
 docker push johncarnell/tmx-organization-service:$BUILD_NAME
