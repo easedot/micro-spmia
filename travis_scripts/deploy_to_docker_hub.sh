@@ -1,4 +1,4 @@
-echo "Pushing service docker images to docker hub ...."
+echo "Pushing service docker images to docker hub ..."
 docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
 docker push easedot/tmx-authentication-service:$BUILD_NAME
 docker push easedot/tmx-licensing-service:$BUILD_NAME
